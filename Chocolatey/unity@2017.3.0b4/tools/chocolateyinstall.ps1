@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName        = 'unity@2017.3.0b4'
+$packageName        = 'unity.2017.3.0b4'
 $toolsDir           = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64              = 'http://beta.unity3d.com/download/4c1b6e48c9c9/Windows64EditorInstaller/UnitySetup64-2017.3.0b4.exe'
 $checksum64         = '4f882c080a52f523ac45de0e60ec6bcec069877ac6afc220bae1fd125390434d'
