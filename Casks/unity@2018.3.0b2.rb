@@ -2,7 +2,7 @@ require 'fileutils'
 
 cask 'unity@2018.3.0b2' do
   version '2018.3.0b2,cc0086a8e10c'
-  sha256 'cf06d7b8b8f2dbebf9c5d0a2930bc45cabb1cdf9ee9ed5f62f0a34e42bab9a0b'
+  sha256 '233fd8d21988c19a5c8edfba1205cd7572381b7dceebfae828f9d06867a32a27'
 
   url "http://beta.unity3d.com/download/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
   name 'Unity Editor'
