@@ -1,14 +1,14 @@
-require 'fileutils'
-
 cask 'unity@2018.3.0b2' do
-  version '2018.3.0b2,cc0086a8e10c'
-  sha256 '233fd8d21988c19a5c8edfba1205cd7572381b7dceebfae828f9d06867a32a27'
+  version '2018.3.0b2,21e0e8a5466d'
+  sha256 :no_check
 
-  url "http://beta.unity3d.com/download/#{version.after_comma}/MacEditorInstaller/Unity.pkg"
-  name 'Unity Editor'
+  url "http://beta.unity3d.com/download/21e0e8a5466d/MacEditorInstaller/Unity.pkg"
+  name 'Unity 2018.3.0b2'
   homepage 'https://unity3d.com/unity/'
 
   pkg 'Unity.pkg'
+
+  
 
   preflight do
     if File.exist? "/Applications/Unity"
@@ -18,7 +18,7 @@ cask 'unity@2018.3.0b2' do
 
   postflight do
     if File.exist? "/Applications/Unity"
-        FileUtils.move "/Applications/Unity", "/Applications/Unity-#{@cask.version.before_comma}"
+        FileUtils.move "/Applications/Unity", "/Applications/Unity-2018.3.0b2"
     end
 
     if File.exist? "/Applications/Unity.temp"
@@ -26,22 +26,6 @@ cask 'unity@2018.3.0b2' do
     end
   end
 
-  uninstall_preflight do
-    if File.exist? "/Applications/Unity"
-      FileUtils.move "/Applications/Unity", "/Applications/Unity.temp"
-    end
-
-    if File.exist? "/Applications/Unity-#{@cask.version.before_comma}"
-      FileUtils.move "/Applications/Unity-#{@cask.version.before_comma}", "/Applications/Unity"
-    end
-  end
-
-  uninstall_postflight do
-    if File.exist? "/Applications/Unity.temp"
-        FileUtils.move "/Applications/Unity.temp", "/Applications/Unity"
-    end
-  end
-
-  uninstall quit:    '',
-            pkgutil: ''
+  uninstall quit:    'com.unity3d.UnityEditor5.x',
+            delete:  '/Applications/Unity-2018.3.0b2'
 end
