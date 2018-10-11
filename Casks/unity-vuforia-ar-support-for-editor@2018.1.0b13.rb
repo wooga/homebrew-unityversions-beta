@@ -12,17 +12,21 @@ cask 'unity-vuforia-ar-support-for-editor@2018.1.0b13' do
 
   preflight do
     if File.exist? "/Applications/Unity"
-        FileUtils.move "/Applications/Unity", "/Applications/Unity.temp"
+      FileUtils.move "/Applications/Unity", "/Applications/Unity.temp"
+    end
+
+    if File.exist? "/Applications/Unity-2018.1.0b13"
+      FileUtils.move "/Applications/Unity-2018.1.0b13", '/Applications/Unity'
     end
   end
 
   postflight do
-    if File.exist? "/Applications/Unity"
-        FileUtils.move "/Applications/Unity", "/Applications/Unity-2018.1.0b13"
+    if File.exist? '/Applications/Unity'
+      FileUtils.move '/Applications/Unity', "/Applications/Unity-2018.1.0b13"
     end
 
-    if File.exist? "/Applications/Unity.temp"
-        FileUtils.move "/Applications/Unity.temp", "/Applications/Unity"
+    if File.exist? '/Applications/Unity.temp'
+      FileUtils.move '/Applications/Unity.temp', '/Applications/Unity'
     end
   end
 
