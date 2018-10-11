@@ -31,5 +31,5 @@ cask 'unity-windows-mono-support-for-editor@2018.2.0b11' do
   end
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity-2018.2.0b11'
+            delete:  '/Applications/Unity-2018.2.0b11/PlaybackEngines/WindowsStandaloneSupport'
 end

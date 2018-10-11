@@ -31,5 +31,5 @@ cask 'unity-mac-il2cpp-support-for-editor@2018.3.0b4' do
   end
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity-2018.3.0b4'
+            delete:  '/Applications/Unity-2018.3.0b4/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport'
 end

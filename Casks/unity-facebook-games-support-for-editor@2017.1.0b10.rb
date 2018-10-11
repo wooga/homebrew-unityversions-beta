@@ -31,5 +31,5 @@ cask 'unity-facebook-games-support-for-editor@2017.1.0b10' do
   end
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity-2017.1.0b10'
+            delete:  '/Applications/Unity-2017.1.0b10/PlaybackEngines/Facebook'
 end

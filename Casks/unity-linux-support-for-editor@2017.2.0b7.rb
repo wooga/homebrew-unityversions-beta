@@ -31,5 +31,5 @@ cask 'unity-linux-support-for-editor@2017.2.0b7' do
   end
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity-2017.2.0b7'
+            delete:  '/Applications/Unity-2017.2.0b7/PlaybackEngines/LinuxStandaloneSupport'
 end

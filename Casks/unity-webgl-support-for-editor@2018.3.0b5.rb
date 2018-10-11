@@ -31,5 +31,5 @@ cask 'unity-webgl-support-for-editor@2018.3.0b5' do
   end
 
   uninstall quit:    'com.unity3d.UnityEditor5.x',
-            delete:  '/Applications/Unity-2018.3.0b5'
+            delete:  '/Applications/Unity-2018.3.0b5/PlaybackEngines/WebGLSupport'
 end
