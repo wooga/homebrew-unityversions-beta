@@ -16,18 +16,18 @@ brew tap wooga/unityversions-beta
 Now you can install any version hosted as cask with
 
 ```bash
-brew cask install unity@2020.1.0a22
+brew cask install unity@2020.1.0a23
 ```
 
 -or-
 
 ```bash
-brew cask install unity-android-support-for-editor@2020.1.0a22
+brew cask install unity-android-support-for-editor@2020.1.0a23
 ```
 
 Unity will be install under `/Applications/Unity-$VERSION`. You can install multiple versions at the same time. All support packages will be installed in the parent Unity directory. Means:
 
-`unity-android-support-for-editor@2020.1.0a22` --> `/Applications/Unity-2020.1.0a22/PlaybackEngines/`
+`unity-android-support-for-editor@2020.1.0a23` --> `/Applications/Unity-2020.1.0a23/PlaybackEngines/`
 
 If you have a unity version installed under `/Applications/Unity/` it will be moved to
 `/Applications/Unity.temp` for the time of the installation.
@@ -188,6 +188,7 @@ Unity Versions available
 | 2020.1.0a20 |
 | 2019.3.0f6 |
 | 2020.1.0a22 |
+| 2020.1.0a23 |
 
 
 Adding a new Version
